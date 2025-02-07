@@ -1,5 +1,5 @@
 # SSF-Strategic-Selection-and-Forgetting
-This is the code for the paper: ["Continual Learning with Strategic Selection and Forgetting for Network Intrusion Detection"](link-to-my-paper) (Infocom 2025)  
+This is the code for the paper: ["Continual Learning with Strategic Selection and Forgetting for Network Intrusion Detection"]([https://ieeexplore.ieee.org/document/10621346/](https://arxiv.org/abs/2412.16264)) (Infocom 2025) 
 Xinchen Zhang, Running Zhao, Zhihan Jiang, Handi Chen, Yulong Ding, Edith C.H. Ngai, Shuang-hua Yang.
 
 ## Dependencies
@@ -20,9 +20,12 @@ pip install -r requirements.txt
 ## Experiments
 We tested the effectiveness of our proposed method on the NSL-KDD and UNSW-NB15 datasets. Preprocessed versions of these datasets are provided in this repository, allowing for immediate execution. The continuous attributes have been normalized, and categorical attributes have been one-hot encoded.
 
-Here is an example of how to start training:
+Here is two examples for each dataset (NSL-KDD and UNSW-NB15) of how to start training:
 ```bash
-python ssf.py --dataset unsw --epochs=200 --epoch_1=180 --sample_interval 20000 --num_labeled_sample 200 --opt_old_lr 24 --opt_new_lr 50 --new_sample_weight 65 
+python ssf.py --dataset nsl --epochs 275 --epoch_1 20 --sample_interval 5000 --num_labeled_sample 50 --opt_old_lr 100 --opt_new_lr 8 --new_sample_weight 1.2
+```
+```bash
+python ssf.py --dataset unsw --epochs 200 --epoch_1 180 --sample_interval 20000 --num_labeled_sample 200 --opt_old_lr 24 --opt_new_lr 50 --new_sample_weight 65 
 ```
 
 ## Citation
