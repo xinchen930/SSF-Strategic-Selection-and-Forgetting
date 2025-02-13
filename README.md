@@ -1,5 +1,6 @@
 # SSF-Strategic-Selection-and-Forgetting
 This is the code for the paper: ["Continual Learning with Strategic Selection and Forgetting for Network Intrusion Detection"]([https://ieeexplore.ieee.org/document/10621346/](https://arxiv.org/abs/2412.16264)) (Infocom 2025) 
+
 Xinchen Zhang, Running Zhao, Zhihan Jiang, Handi Chen, Yulong Ding, Edith C.H. Ngai, Shuang-hua Yang.
 
 ## Dependencies
