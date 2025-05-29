@@ -287,20 +287,7 @@ for i in range(seed_round):
                         weighted_classification_loss = classification_loss * ((1 - new_sample_mask) + new_sample_mask * new_sample_weight)
                         weighted_loss = weighted_con_loss.mean() + weighted_classification_loss.mean()
 
-                    # Apply the new sample weight using the mask
-                    # weighted_loss = (1 - mask) * loss + mask * new_sample_weight * loss
-
-                    if dataset == 'nsl':
-                        with torch.no_grad():
-                            teacher_features, teacher_recon_vec = teacher_model(inputs)
-                        distillation_loss = F.mse_loss(recon_vec, teacher_recon_vec)
-                    else:
-                        with torch.no_grad():
-                            teacher_features, teacher_recon_vec, teacher_logits = teacher_model(inputs)
-                        distillation_loss = F.mse_loss(classifications, teacher_logits)
-                    total_loss = weighted_loss + lwf_lambda * distillation_loss
-
-                    total_loss.backward()
+                    weighted_loss.backward()
                     optimizer.step()
         else:      
             for epoch in range(epoch_1):
