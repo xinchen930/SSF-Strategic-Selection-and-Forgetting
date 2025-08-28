@@ -32,11 +32,13 @@ python ssf.py --dataset unsw --epochs 200 --epoch_1 180 --sample_interval 20000 
 ## Citation
 If you find this code useful in your research, please cite:
 ```bibtex
-@article{zhang2024continual,
-  title={Continual Learning with Strategic Selection and Forgetting for Network Intrusion Detection},
+@inproceedings{zhang2025continual,
+  title={Continual learning with strategic selection and forgetting for network intrusion detection},
   author={Zhang, Xinchen and Zhao, Running and Jiang, Zhihan and Chen, Handi and Ding, Yulong and Ngai, Edith CH and Yang, Shuang-Hua},
-  journal={arXiv preprint arXiv:2412.16264},
-  year={2024}
+  booktitle={IEEE INFOCOM 2025-IEEE Conference on Computer Communications},
+  pages={1--10},
+  year={2025},
+  organization={IEEE}
 }
 ```
 
